@@ -6,24 +6,14 @@
 <title>Painel Pós-Operatório · Dr. Carlos Bruno</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#f5f2ee;--surface:#fff;--surface2:#f0ede8;
-  --text:#1a1714;--text2:#6b6560;--text3:#a09990;
-  --border:rgba(26,23,20,0.10);--border2:rgba(26,23,20,0.18);
-  --accent:#8b4513;--accent-bg:#f7ede4;--accent-text:#7a3910;
-  --warn:#b8860b;--warn-bg:#fdf6e3;--warn-text:#9a6f00;
-  --danger:#c0392b;--danger-bg:#fdf0ee;--danger-text:#a93226;
-  --success:#2e7d52;--success-bg:#eaf5ee;--success-text:#276644;
-  --radius:12px;--radius-sm:8px;
-}
+:root{--bg:#f5f2ee;--surface:#fff;--surface2:#f0ede8;--text:#1a1714;--text2:#6b6560;--text3:#a09990;--border:rgba(26,23,20,0.10);--border2:rgba(26,23,20,0.18);--accent:#8b4513;--accent-bg:#f7ede4;--accent-text:#7a3910;--warn:#b8860b;--warn-bg:#fdf6e3;--warn-text:#9a6f00;--danger:#c0392b;--danger-bg:#fdf0ee;--danger-text:#a93226;--success:#2e7d52;--success-bg:#eaf5ee;--success-text:#276644;--radius:12px;--radius-sm:8px}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.5;min-height:100vh}
 header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
 .logo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--accent);letter-spacing:-0.02em}
 .logo span{color:var(--text2);font-size:12px;font-family:'DM Sans',sans-serif;font-weight:300;display:block}
 .sync-btn{display:flex;align-items:center;gap:6px;background:var(--accent);color:white;border:none;border-radius:var(--radius-sm);padding:8px 14px;font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;font-weight:500;transition:opacity 0.15s}
-.sync-btn:hover{opacity:0.85}
-.sync-btn.loading{opacity:0.6;pointer-events:none}
+.sync-btn:hover{opacity:0.85}.sync-btn.loading{opacity:0.6;pointer-events:none}
 nav{display:flex;background:var(--surface);border-bottom:1px solid var(--border);padding:0 24px;overflow-x:auto}
 .nav-tab{padding:12px 18px;font-size:13px;font-weight:400;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;font-family:'DM Sans',sans-serif;transition:color 0.15s}
 .nav-tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
@@ -37,27 +27,20 @@ main{padding:20px;max-width:720px;margin:0 auto}
 .alert-warn{background:var(--warn-bg);border-color:var(--warn)}
 .alert-danger{background:var(--danger-bg);border-color:var(--danger)}
 .alert-title{font-size:13px;font-weight:500;margin-bottom:8px}
-.alert-warn .alert-title{color:var(--warn-text)}
-.alert-danger .alert-title{color:var(--danger-text)}
+.alert-warn .alert-title{color:var(--warn-text)}.alert-danger .alert-title{color:var(--danger-text)}
 .p-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
 .p-row:last-child{border-bottom:none}
 .avatar{width:36px;height:36px;border-radius:50%;background:var(--accent-bg);color:var(--accent-text);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0}
-.p-name{font-size:14px;font-weight:500}
-.p-sub{font-size:12px;color:var(--text2);margin-top:1px}
+.p-name{font-size:14px;font-weight:500}.p-sub{font-size:12px;color:var(--text2);margin-top:1px}
 .badge{display:inline-block;font-size:11px;font-weight:500;padding:3px 9px;border-radius:20px;white-space:nowrap}
-.badge-today{background:var(--warn-bg);color:var(--warn-text)}
-.badge-late{background:var(--danger-bg);color:var(--danger-text)}
-.badge-ok{background:var(--success-bg);color:var(--success-text)}
-.badge-future{background:var(--surface2);color:var(--text2)}
+.badge-today{background:var(--warn-bg);color:var(--warn-text)}.badge-late{background:var(--danger-bg);color:var(--danger-text)}
+.badge-ok{background:var(--success-bg);color:var(--success-text)}.badge-future{background:var(--surface2);color:var(--text2)}
 .badge-suspended{background:var(--surface2);color:var(--text3)}
 .btn{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;font-size:12px;cursor:pointer;border:1px solid var(--border2);border-radius:var(--radius-sm);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;transition:background 0.12s;text-decoration:none}
-.btn:hover{background:var(--surface2)}
-.btn-accent{color:var(--accent-text);border-color:var(--accent)}
-.btn-danger{color:var(--danger-text);border-color:var(--danger)}
-.btn-success{color:var(--success-text);border-color:var(--success)}
+.btn:hover{background:var(--surface2)}.btn-accent{color:var(--accent-text);border-color:var(--accent)}
+.btn-danger{color:var(--danger-text);border-color:var(--danger)}.btn-success{color:var(--success-text);border-color:var(--success)}
 .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.dot-today{background:var(--warn)}.dot-late{background:var(--danger)}
-.dot-ok{background:var(--success)}.dot-future{background:var(--text3)}.dot-done{background:var(--border2)}
+.dot-today{background:var(--warn)}.dot-late{background:var(--danger)}.dot-ok{background:var(--success)}.dot-future{background:var(--text3)}.dot-done{background:var(--border2)}
 .section-lbl{font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:0.06em;margin:16px 0 8px}
 input,select{width:100%;font-size:13px;font-family:'DM Sans',sans-serif;border:1px solid var(--border2);border-radius:var(--radius-sm);padding:8px 10px;background:var(--surface);color:var(--text);outline:none;transition:border-color 0.12s}
 input:focus,select:focus{border-color:var(--accent)}
@@ -68,8 +51,7 @@ label{font-size:11px;color:var(--text2);display:block;margin-bottom:4px}
 .modal{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:20px 22px;width:100%;max-width:480px}
 .modal-header{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:4px}
 .sched-item{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:13px}
-.sched-item:last-child{border-bottom:none}
-.sched-date{min-width:60px;color:var(--text2)}
+.sched-item:last-child{border-bottom:none}.sched-date{min-width:60px;color:var(--text2)}
 .tag-trello{font-size:10px;padding:1px 6px;border-radius:10px;background:#e8f0fe;color:#1a56db;margin-left:4px}
 .spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,0.4);border-top-color:white;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -77,14 +59,14 @@ label{font-size:11px;color:var(--text2);display:block;margin-bottom:4px}
 @keyframes fadeIn{from{opacity:0;transform:translateX(-50%) translateY(8px)}}
 .progress-bar{height:3px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden}
 .progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.3s}
-.cloud-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 8px;border-radius:10px;background:var(--success-bg);color:var(--success-text);margin-left:8px}
-@media(max-width:480px){main{padding:12px}.stat-grid{gap:6px}.form-grid{grid-template-columns:1fr}header{padding:12px 16px}}
+.cloud-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 8px;border-radius:10px}
+@media(max-width:480px){main{padding:12px}.form-grid{grid-template-columns:1fr}header{padding:12px 16px}}
 </style>
 </head>
 <body>
 <header>
   <div class="logo">Dr. Carlos Bruno <span>Acompanhamento Pós-Operatório</span></div>
-  <button class="sync-btn" id="sync-btn" onclick="syncTrello()"><span id="sync-icon">&#8635;</span> Sincronizar</button>
+  <button class="sync-btn" id="sync-btn" onclick="syncTrello()"><span>&#8635;</span> Sincronizar</button>
 </header>
 <nav>
   <button class="nav-tab active" onclick="showTab('hoje')">Hoje</button>
@@ -100,9 +82,6 @@ label{font-size:11px;color:var(--text2);display:block;margin-bottom:4px}
   <div id="tab-config" style="display:none"></div>
 </main>
 <script>
-const API_KEY='3956f2efa588dd58ec180973d62379d4';
-const TOKEN='eab2c79f1656bbda3c6c0c7745bc55fe3983992a442d7ff02c6be36f998abb0c';
-const TRELLO='https://api.trello.com/1';
 const TODAY=new Date();TODAY.setHours(0,0,0,0);
 
 function fmt(d){return new Date(d+'T12:00:00').toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'})}
@@ -152,35 +131,34 @@ async function loadProgress(){
     const r=await fetch('/api/progress');
     if(r.ok){progress=await r.json();cloudSynced=true;}
   }catch(e){
-    const raw=localStorage.getItem('drcarlos_progress');
-    if(raw) progress=JSON.parse(raw);
+    try{const raw=localStorage.getItem('drcarlos_progress');if(raw)progress=JSON.parse(raw);}catch(e2){}
   }
 }
 
 async function saveProgress(){
   patients.forEach(p=>{progress[p.id]=p.done;});
   try{
-    await fetch('/api/progress',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(progress)});
-    cloudSynced=true;
+    const r=await fetch('/api/progress',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(progress)});
+    if(r.ok) cloudSynced=true;
   }catch(e){
-    localStorage.setItem('drcarlos_progress',JSON.stringify(progress));
+    try{localStorage.setItem('drcarlos_progress',JSON.stringify(progress));}catch(e2){}
     cloudSynced=false;
   }
 }
 
 function loadPatients(){
-  try{patients=JSON.parse(localStorage.getItem('drcarlos_pats_v4')||'[]');}
-  catch(e){patients=[];}
+  try{patients=JSON.parse(localStorage.getItem('drcarlos_pats_v4')||'[]');}catch(e){patients=[];}
   patients.forEach(p=>{
     if(!p.schedule) p.schedule=genSchedule(p.data,p.fase||'diario7');
     p.done=progress[p.id]||{};
   });
 }
+function savePatients(){try{localStorage.setItem('drcarlos_pats_v4',JSON.stringify(patients));}catch(e){}}
 
-function savePatients(){localStorage.setItem('drcarlos_pats_v4',JSON.stringify(patients));}
-
-async function trelloGet(path){
-  const r=await fetch(`${TRELLO}${path}${path.includes('?')?'&':'?'}key=${API_KEY}&token=${TOKEN}`);
+async function trelloGet(path,params={}){
+  const qs=new URLSearchParams(params).toString();
+  const url=`/api/trello/${path}${qs?'?'+qs:''}`;
+  const r=await fetch(url);
   if(!r.ok) throw new Error('Erro Trello '+r.status);
   return r.json();
 }
@@ -190,14 +168,14 @@ async function syncTrello(){
   btn.classList.add('loading');
   btn.innerHTML='<span class="spinner"></span> Sincronizando...';
   try{
-    const boards=await trelloGet('/members/me/boards?filter=open&fields=id,name');
+    const boards=await trelloGet('members/me/boards',{filter:'open',fields:'id,name'});
     trelloBoards=boards;
     const targets=boards.filter(b=>b.name.toLowerCase().includes('cirurgia')||b.name.toLowerCase().includes('mohs'));
     let added=0;
     for(const board of targets){
-      const lists=await trelloGet(`/boards/${board.id}/lists?fields=id,name`);
+      const lists=await trelloGet(`boards/${board.id}/lists`,{fields:'id,name'});
       for(const list of lists){
-        const cards=await trelloGet(`/lists/${list.id}/cards?fields=id,name`);
+        const cards=await trelloGet(`lists/${list.id}/cards`,{fields:'id,name'});
         for(const card of cards){
           const parsed=parseCard(card.name);
           if(!parsed) continue;
@@ -218,14 +196,10 @@ async function syncTrello(){
 
 function showToast(msg){
   const t=document.createElement('div');t.className='toast';t.textContent=msg;
-  document.body.appendChild(t);setTimeout(()=>t.remove(),3000);
+  document.body.appendChild(t);setTimeout(()=>t.remove(),3500);
 }
 
 function initials(nome){return nome.split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase();}
-
-function cloudIndicator(){
-  return cloudSynced?`<span class="cloud-badge">&#9729; Sincronizado</span>`:`<span class="cloud-badge" style="background:var(--warn-bg);color:var(--warn-text)">&#9888; Local</span>`;
-}
 
 function renderHoje(){
   const el=document.getElementById('tab-hoje');
@@ -240,8 +214,11 @@ function renderHoje(){
   });
   next7.sort((a,b)=>a.diff-b.diff);
   const ativos=patients.filter(p=>!p.suspended&&nextContact(p)).length;
+  const syncBadge=cloudSynced
+    ?`<span class="cloud-badge" style="background:var(--success-bg);color:var(--success-text)">&#9729; Nuvem ativa</span>`
+    :`<span class="cloud-badge" style="background:var(--warn-bg);color:var(--warn-text)">&#9888; Modo local</span>`;
 
-  let html=`<div style="display:flex;align-items:center;justify-content:flex-end;margin-bottom:10px;font-size:12px">${cloudIndicator()}</div>`;
+  let html=`<div style="display:flex;justify-content:flex-end;margin-bottom:10px">${syncBadge}</div>`;
   html+=`<div class="stat-grid">
     <div class="stat-card"><div class="stat-num" style="color:var(--warn)">${todayList.length}</div><div class="stat-lbl">Hoje</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--danger)">${lateList.length}</div><div class="stat-lbl">Atrasados</div></div>
@@ -285,7 +262,7 @@ function renderPatients(){
     let badge='';
     if(p.suspended) badge=`<span class="badge badge-suspended">Suspenso</span>`;
     else if(!nc) badge=`<span class="badge badge-ok">Concluído</span>`;
-    else{const st=getStatus(nc.contact.date);if(st==='today') badge=`<span class="badge badge-today">Hoje</span>`;else if(st==='late') badge=`<span class="badge badge-late">Atrasado</span>`;else badge=`<span class="badge badge-future">${fmt(nc.contact.date)}</span>`;}
+    else{const st=getStatus(nc.contact.date);if(st==='today')badge=`<span class="badge badge-today">Hoje</span>`;else if(st==='late')badge=`<span class="badge badge-late">Atrasado</span>`;else badge=`<span class="badge badge-future">${fmt(nc.contact.date)}</span>`;}
     const trTag=p.trelloId?`<span class="tag-trello">Trello</span>`:'';
     html+=`<div class="p-row"><div class="avatar">${initials(p.nome)}</div><div style="flex:1"><div class="p-name">${p.nome}${trTag}</div><div class="p-sub">${p.proc} · ${fmt(p.data)}</div>${p.obs?`<div style="font-size:11px;color:var(--warn-text);margin-top:2px">${p.obs}</div>`:''}</div>${badge}<button class="btn" style="margin-left:6px" onclick="openModal('${p.id}')">Ver</button></div>`;
   });
@@ -331,7 +308,7 @@ function renderConfig(){
   document.getElementById('tab-config').innerHTML=`
   <div class="card">
     <div style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">Sincronização</div>
-    <div style="font-size:13px;margin-bottom:6px">${cloudSynced?'&#9729; Progresso salvo na nuvem (Railway)':'&#9888; Salvando localmente (Railway offline)'}</div>
+    <div style="font-size:13px;margin-bottom:6px">${cloudSynced?'&#9729; Progresso salvo na nuvem (Railway)':'&#9888; Salvando localmente'}</div>
     <div style="font-size:13px;color:var(--text2);margin-bottom:8px">${boards.length?boards.map(b=>`Board: ${b.name}`).join('<br>'):'Nenhum board detectado ainda.'}</div>
     <button class="btn btn-accent" onclick="syncTrello()">Sincronizar Trello agora</button>
   </div>
@@ -389,8 +366,8 @@ async function toggleDone(pid,idx){
 function suspendP(pid){
   if(!confirm('Suspender acompanhamento?')) return;
   const p=patients.find(x=>String(x.id)===String(pid));
-  if(p) p.suspended=true;
-  savePatients();closeModal();
+  if(p){p.suspended=true;savePatients();}
+  closeModal();
 }
 
 function showTab(t){
@@ -414,7 +391,7 @@ function renderAll(){
 async function init(){
   await loadProgress();
   loadPatients();
-  syncTrello();
+  await syncTrello();
 }
 
 init();
