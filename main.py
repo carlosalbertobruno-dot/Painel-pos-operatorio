@@ -3,8 +3,8 @@ import json, os, requests
 
 app = Flask(__name__)
 DATA_FILE = 'progress.json'
-TRELLO_KEY = '3956f2efa588dd58ec180973d62379d4'
-TRELLO_TOKEN = 'ATTA871efcd8c2a41e07719c8a2fe4ec8d5e9e695066f1029902926f9111d2e41176FE9BDD4D'
+TRELLO_KEY = os.environ.get('TRELLO_KEY', '')
+TRELLO_TOKEN = os.environ.get('TRELLO_TOKEN', '')
 TRELLO_BASE = 'https://api.trello.com/1'
 
 def load_data():
